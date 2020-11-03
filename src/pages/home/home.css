@@ -1,0 +1,30 @@
+.home__container {
+}
+
+.home__title {
+  margin: 1rem;
+  font-size: 4rem;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: var(--color--text);
+  text-shadow: 3px 3px 10px var(--color--text);
+  animation: showText 5s 1s ease-in-out forwards;
+}
+
+/* animations */
+@keyframes showText {
+  0% {
+    color: rgba(128, 128, 128, 0);
+    text-shadow: 3px 3px 10px rgba(128, 128, 128, 0);
+  }
+  50% {
+    color: rgba(128, 128, 128, 0.5);
+    text-shadow: 3px 3px 10px rgba(128, 128, 128, 1);
+  }
+  100% {
+    background-color: rgba(128, 128, 128, 1);
+    color: transparent;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  }
+}
