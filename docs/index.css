@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   outline: none;
-  transition: all 0.25 0s ease;
+  transition: all 0.25 0s ease-in-out;
 }
 button,
 [type='button'],
@@ -49,11 +49,29 @@ body {
 }
 .container > .section > .icon {
   font-size: 10em;
+  cursor: pointer;
+}
+.container > .section > .icon > .icon-github:hover {
+  color: black;
+  /* text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75); */
+}
+.container > .section > .icon > .icon-person:hover {
+  color: rgba(128, 128, 128, 0.5);
+  /* text-shadow: 5px 5px 10px rgba(128, 128, 128, 0.75); */
+}
+.container > .section > .icon > .icon-linkedIn:hover {
+  color: rgba(10, 102, 194, 1);
+  /* text-shadow: 5px 5px 10px rgba(10, 102, 194, 0.75); */
+}
+.container > .section > .icon > .icon-contactMe:hover {
+  color: rgb(250, 150, 50);
+  /* text-shadow: 5px 5px 10px rgba(250, 150, 50, 0.75); */
 }
 
 .text-inset-shadow {
-  box-shadow: inset;
-  -moz-background-clip: text;
+  background-color: #666666;
+  background-clip: text;
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5), 0px -1px 1px rgba(0, 0, 0, 0.5);
