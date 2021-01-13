@@ -1,0 +1,58 @@
+MERN
+[DB : MongoDB]
+https://www.mongodb.com/3
+
+- backend (node)
+ |- npm i mongoose : es un ERM para mejor manejo de MongoDB en clases
+ |- npm i cors : para hacer la comunicacion entre dos server
+ |- npm i dotenv : para manejar variables de entornos
+ |- npm i nodemon -D : ( -D -> libreria solo para desarrollo)
+      para habilitarlo es > npx nodemon ./src/index.js
+      package.json --> "dev":"nodemon ./src/index.js"
+
+- frontend
+ |- npx create-react-app
+ |- npm run start
+
+structure folders
+ src/
+   index.js  : require('./app) main, app.listen
+   app.js : (settings, middlewares, routes) module.exports = app ..=> router
+   database.js
+   controllers/
+     |- usersControllers
+     |- notescontrollers
+   models/
+     |-  
+   routes/ ... => controller
+     |- users.js (express Router())
+     |- notes.js (express Router())
+ .env (variables de entorno - este archivo no se sube al repo)
+
+newCombin
+3 años
+bs as
+mexico
+- trans  digital
+- desa soft
+
+
+HEROKU
+> heroku -v (chequemoas que tenemos heroku instalado)
+> heroku login (nos abre el browse para logearnos a la cuenta de heroku)
+> heroku create nombre-de-mi-app (creamos la app que luego subiremos)
+  [este punto nos proporciona la url de nuestra app y el repo en git.heroku]
+> git push heroku master (aqui subimos nuestro codigo al repo heroku)
+  [si abrimos el browser o refrescamos nos dara error, esto es porque...]
+- añadir en package.json lo siguiente
+
+
+VIEW ENGINE
+PUG
+> npm i pug
+
+HANDLEBARS
+- https://www.npmjs.com/package/express-handlebars
+- https://www.youtube.com/watch?v=1srD3Mdvf50&ab_channel=Academind
+
+
