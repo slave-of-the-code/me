@@ -13,10 +13,4 @@ $btn.addEventListener("click", () => {
   $containerText.classList.toggle("text__slaveOfTheCode__show");
   $lineSeparate.classList.toggle("line__separate__show");
   $detailsContainer.classList.toggle("details__container__show");
-  // $allP.forEach((p) => {
-  //   p.classList.toggle("show-text");
-  // });
-  // $allIcons.forEach((i) => {
-  //   i.classList.toggle("icons");
-  // });
 });
