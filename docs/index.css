@@ -304,3 +304,11 @@ body > footer {
   }
 }
 /* #endregion */
+
+/* #region SSL LOGO */
+.ssl__logo {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+/* #endregion */
