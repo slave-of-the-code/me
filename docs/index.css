@@ -1,0 +1,306 @@
+/* #region MAIN */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.25 0s ease;
+  font-family: "Josefin Sans", sans-serif;
+}
+button,
+[type="button"],
+[type="submit"],
+[href] {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgba(128, 128, 128, 0.15)); */
+  background: rgb(250, 250, 250);
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+/* #endregion */
+
+/* #region LAYOUT */
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "section"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px calc(100vh - 75px - 100px) 75px;
+}
+
+body > header {
+  position: relative;
+  grid-area: header;
+}
+body > section {
+  position: relative;
+  font-size: 10em;
+  grid-area: section;
+}
+body > footer {
+  position: relative;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  border-top: 1px solid rgba(128, 128, 128, 0.15);
+  filter: blur(5px);
+}
+.footer__show {
+  animation: footer__unblur 6s 0s ease-in-out forwards;
+}
+@keyframes footer__unblur {
+  100% {
+    filter: blur(0);
+  }
+}
+/* #endregion */
+
+/* #region BUTTON WHO AM I */
+.btn__whoAmI {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(100% / 2 - 5rem);
+  margin: auto;
+  height: 5rem;
+  opacity: 1;
+  display: block;
+  padding: 0.5em 1em;
+  border-style: none;
+  font-size: 0.25em;
+  background: rgb(245 245 245);
+  box-shadow: -5px -5px 5px white, 3px 3px 10px rgba(128, 128, 128, 0.5);
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-radius: 50px;
+  color: transparent;
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5),
+    0px -1px 1px rgba(0, 0, 0, 0.5);
+}
+.btn__whoAmI:active {
+  box-shadow: inset -5px -5px 5px white,
+    inset 3px 3px 10px rgba(128, 128, 128, 0.5);
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5),
+    0px -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.btn__whoAmI__move {
+  animation: animation-button 2s 0s ease-out forwards,
+    animation-button-scale 2s 2s ease-out forwards;
+}
+@keyframes animation-button {
+  0% {
+    opacity: 0.5;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 0.25;
+  }
+  90% {
+    opacity: 0.75;
+  }
+  100% {
+    top: -75px;
+    opacity: 1;
+  }
+}
+@keyframes animation-button-scale {
+  100% {
+    transform: scale(0.75);
+  }
+}
+/* #endregion BUTTON WHO AM I */
+
+/* #region TEXT SLAVE OF THE CODE */
+.text__slaveOfTheCode {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: -1;
+  height: fit-content;
+  width: fit-content;
+  font-size: 13rem;
+}
+.text__slaveOfTheCode__show {
+  animation: animation-container-text 3s 2s ease-out forwards,
+    moveLeftContainer 2s 4s ease-in-out forwards;
+}
+@keyframes animation-container-text {
+  0% {
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    opacity: 1;
+    z-index: 0;
+  }
+}
+@keyframes moveLeftContainer {
+  100% {
+    opacity: 1;
+    transform: translateX(-65%);
+  }
+}
+/* #endregion */
+
+/* #region LINE SEPARATE */
+.line__separate {
+  position: absolute;
+  height: 0%;
+  width: 1px;
+  background: rgba(128, 128, 128, 0.25);
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  z-index: -2;
+}
+.line__separate__show {
+  opacity: 0.25;
+  animation: line__separate__show 1.5s 6s ease-in-out forwards,
+    line__separate__back 1.5s 9s ease-in-out forwards;
+}
+@keyframes line__separate__show {
+  0% {
+    opacity: 0;
+    height: 0%;
+  }
+  25% {
+    opacity: 0.25;
+    height: 10%;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  90% {
+    opacity: 0.75;
+    height: 85%;
+    box-shadow: 5px 0 20px 5px rgba(128, 128, 128, 0.85);
+  }
+  100% {
+    opacity: 0.75;
+    height: 80%;
+    box-shadow: 5px 0 15px 5px rgba(128, 128, 128, 0.85);
+  }
+}
+@keyframes line__separate__back {
+  100% {
+    opacity: 0.75;
+    height: 79%;
+    box-shadow: -5px 0 15px 3px rgba(128, 128, 128, 1);
+  }
+}
+/* #endregion */
+
+/* #region CLASS */
+.text-shadow {
+  letter-spacing: 20px;
+  color: rgb(245 245 245);
+  text-shadow: -7.5px 0px 7.5px rgba(255, 255, 255, 1),
+    2.5px 0px 5px rgba(128, 128, 128, 0.5),
+    0px -2.5px 5px rgba(128, 128, 128, 0.5),
+    0px -7.5px 7.5px rgba(255, 255, 255, 1);
+}
+/* #endregion */
+
+/* #region DETAILS */
+.details__container__background {
+  opacity: 1;
+  position: absolute;
+  height: 85%;
+  width: 30%;
+  background: rgb(250, 250, 250);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: -2;
+  transform: translateX(-50%);
+  border-radius: 25px;
+}
+.details__container {
+  opacity: 0;
+  position: absolute;
+  height: 75%;
+  width: 30%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  z-index: -3;
+  transform: translateX(-50%);
+}
+.details__container__show {
+  animation: details__container__show 3s 7s ease-in-out forwards;
+}
+@keyframes details__container__show {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(65%);
+  }
+}
+.details__container__list {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.details__container__list > li {
+  /* padding: 1rem 1rem 1rem 2rem; */
+  margin: 1rem 0;
+  width: 300px;
+  height: 5rem;
+  padding: 0.5em 1em;
+  border-style: none;
+  font-size: 0.25em;
+  background: rgb(245 245 245);
+  border-left: 1px solid white;
+  border-top: 1px solid white;
+  border-radius: 50px;
+  color: transparent;
+  box-shadow: inset -5px -5px 5px white,
+    inset 3px 3px 10px rgba(128, 128, 128, 0.5);
+  text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5),
+    0px -1px 1px rgba(0, 0, 0, 0.25);
+  filter: blur(3px);
+  animation: details__container__list_blur 1s 11s ease-in-out forwards;
+}
+@keyframes details__container__list_blur {
+  100% {
+    filter: blur(0);
+    z-index: 0;
+  }
+}
+/* #endregion */
