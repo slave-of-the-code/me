@@ -48,6 +48,7 @@ body > section {
   position: relative;
   font-size: 10em;
   grid-area: section;
+  z-index: 0;
 }
 body > footer {
   position: relative;
