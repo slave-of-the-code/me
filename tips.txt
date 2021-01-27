@@ -29,13 +29,6 @@ structure folders
      |- notes.js (express Router())
  .env (variables de entorno - este archivo no se sube al repo)
 
-newCombin
-3 años
-bs as
-mexico
-- trans  digital
-- desa soft
-
 
 HEROKU
 > heroku -v (chequemoas que tenemos heroku instalado)
