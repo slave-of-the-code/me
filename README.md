@@ -1,3 +1,4 @@
-# This version will have...
+# On line
 
-This version shows a version more minimalist and clean, in addition, we can see improvements on different sizes and resolutions.
+- [Github Pages](https://slave-of-the-code.github.io/me/)
+- [Web](https://slaveofthecode.com/)
