@@ -242,6 +242,16 @@ body > footer {
 /* #endregion */
 
 /* #region MEDIAQUERIES */
+/* laptop HD */
+@media screen and (max-width: 1366px) and (max-height: 635px) {
+  .links__list > li {
+    justify-content: center;
+  }
+  :root {
+    --font--size: 12px;
+  }
+}
+
 @media screen and (max-width: 1264px) {
   .text__slaveOfTheCode {
     flex: 2;
@@ -281,6 +291,16 @@ body > footer {
 
   :root {
     --font--size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) and (max-height: 635px) {
+  .text__slaveOfTheCode {
+    flex: 1;
+    font-size: 11rem;
+  }
+  :root {
+    --font--size: 10px;
   }
 }
 
